@@ -1,0 +1,242 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/Reverso.Starter.csproj": {}
+  },
+  "projects": {
+    "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/Reverso.Controller.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/Reverso.Controller.csproj",
+        "projectName": "Reverso.Controller",
+        "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/Reverso.Controller.csproj",
+        "packagesPath": "/Users/qualiaaa/.nuget/packages/",
+        "outputPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/qualiaaa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj": {
+                "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj",
+        "projectName": "Reverso.Model",
+        "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj",
+        "packagesPath": "/Users/qualiaaa/.nuget/packages/",
+        "outputPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/qualiaaa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/Reverso.Starter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/Reverso.Starter.csproj",
+        "projectName": "Reverso.Starter",
+        "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/Reverso.Starter.csproj",
+        "packagesPath": "/Users/qualiaaa/.nuget/packages/",
+        "outputPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/qualiaaa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/Reverso.Controller.csproj": {
+                "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/Reverso.Controller.csproj"
+              },
+              "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj": {
+                "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj"
+              },
+              "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.View/Reverso.View.csproj": {
+                "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.View/Reverso.View.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.View/Reverso.View.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.View/Reverso.View.csproj",
+        "projectName": "Reverso.View",
+        "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.View/Reverso.View.csproj",
+        "packagesPath": "/Users/qualiaaa/.nuget/packages/",
+        "outputPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.View/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/qualiaaa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj": {
+                "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

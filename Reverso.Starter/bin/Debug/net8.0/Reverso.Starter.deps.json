@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Reverso.Starter/1.0.0": {
+        "dependencies": {
+          "Reverso.Controller": "1.0.0",
+          "Reverso.Model": "1.0.0",
+          "Reverso.View": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Starter.dll": {}
+        }
+      },
+      "Reverso.Controller/1.0.0": {
+        "dependencies": {
+          "Reverso.Model": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Controller.dll": {}
+        }
+      },
+      "Reverso.Model/1.0.0": {
+        "runtime": {
+          "Reverso.Model.dll": {}
+        }
+      },
+      "Reverso.View/1.0.0": {
+        "dependencies": {
+          "Reverso.Model": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.View.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Reverso.Starter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Controller/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.View/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
