@@ -99,3 +99,4 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.genruntimeconfig.cache
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ref/ReversoGame.Model.Tests.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.sourcelink.json

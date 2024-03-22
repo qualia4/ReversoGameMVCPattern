@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace ReversoGame.Model.Tests;
 
 [TestFixture]
-public class Tests
+public class ModelTests
 {
 
     [Test]
@@ -123,6 +123,7 @@ public class Tests
         Assert.IsTrue(fieldUpdatedEventRaised);
         Assert.IsTrue(pointsUpdatedEventRaised);
     }
+
 
 
 

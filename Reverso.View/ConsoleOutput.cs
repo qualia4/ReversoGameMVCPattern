@@ -58,7 +58,7 @@ public class ConsoleOutput
                 }
                 else
                 {
-                    Console.Write($" {field[i,j].GetPlayer()?.GetName().Substring(0,1)} ");
+                    Console.Write($" {field[i,j].GetHost()?.GetName().Substring(0,1)} ");
                 }
             }
             Console.WriteLine(" ");

@@ -21,7 +21,7 @@ public class Cell
     }
 
 
-    public IHasName? GetPlayer()
+    public IHasName? GetHost()
     {
         return Host;
     }

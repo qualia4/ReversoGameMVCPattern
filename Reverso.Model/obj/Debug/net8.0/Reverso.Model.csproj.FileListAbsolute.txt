@@ -9,3 +9,4 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/obj/Debug/net8.0/refint/Reverso.Model.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/obj/Debug/net8.0/Reverso.Model.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/obj/Debug/net8.0/ref/Reverso.Model.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/obj/Debug/net8.0/Reverso.Model.sourcelink.json

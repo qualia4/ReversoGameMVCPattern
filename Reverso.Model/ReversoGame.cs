@@ -104,7 +104,7 @@ public class ReversoGame(Player firstPlayer, Player secondPlayer)
                 break;
             }
 
-            if (Field[x, y].GetPlayer() == CurrentPlayer)
+            if (Field[x, y].GetHost() == CurrentPlayer)
             {
                 if (foundOpponent)
                 {
@@ -177,7 +177,7 @@ public class ReversoGame(Player firstPlayer, Player secondPlayer)
         int pointsToAdd = 0;
 
         while (IsInBounds(x, y) && Field?[x, y].IfEmpty == false &&
-               Field[x, y].GetPlayer() != CurrentPlayer)
+               Field[x, y].GetHost() != CurrentPlayer)
         {
             Field[x, y].Rehost(CurrentPlayer);
             pointsToAdd++;
