@@ -1,9 +1,9 @@
 namespace Reverso.Model;
 
-public class Player: IHasName
+public abstract class Player: IHasName
 {
     public string Name { get; }
-    protected int Points { get; set; }
+    public int Points { get; set; }
 
     public Player(string name)
     {
@@ -16,14 +16,14 @@ public class Player: IHasName
         Points += pointsToAdd;
     }
 
-    public void Reset()
+    public void ResetPoints()
     {
         Points = 0;
     }
 
-    public void RemovePoint()
+    public void RemovePoints(int pointsToRemove)
     {
-        Points --;
+        Points -= pointsToRemove;
     }
 
     public int GetPoints()
@@ -35,4 +35,7 @@ public class Player: IHasName
     {
         return Name;
     }
+
+    public abstract int MakeMoveOnField(Field GameField);
+
 }

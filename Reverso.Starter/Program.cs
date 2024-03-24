@@ -2,7 +2,7 @@
 using Reverso.View;
 using Reverso.Controller;
 
-var game = new ReversoGameWithEvents(new Player("A"), new Player("B"));
+var game = new ReversoGameWithEvents();
 var output = new ConsoleOutput();
 output.ListenTo(game);
 

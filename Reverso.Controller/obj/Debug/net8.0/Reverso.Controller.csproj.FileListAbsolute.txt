@@ -13,3 +13,4 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/refint/Reverso.Controller.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/ref/Reverso.Controller.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.sourcelink.json

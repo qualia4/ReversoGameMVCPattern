@@ -12,39 +12,53 @@ public class ConsoleInput
         switch (Console.ReadLine().ToLower())
         {
             case "start":
-                game.StartGame(ChooseGameMove());
-                Console.WriteLine("Commands:");
-                Console.WriteLine("move Y X - make a move");
-                Console.WriteLine("exit - close the game");
-                Console.WriteLine("restart - restart the game");
+                StartGame(game);
                 break;
             default:
                 return;
         }
         while (true)
         {
-            string command = Console.ReadLine();
-            var splitCommand = command.Split(new char[0]);
-            switch (splitCommand[0].ToLower())
+            try
             {
-                case "restart":
-                    game.StartGame(ChooseGameMove());
-                    break;
-                case "exit":
-                    return;
-                case "move":
-                    var x = int.Parse(splitCommand[1]);
-                    var y = int.Parse(splitCommand[2]);
-                    game.MakeMove(x, y);
-                    break;
-                default:
-                    Console.WriteLine($"{splitCommand[0].ToLower()} is not a valid command");
-                    break;
+                game.MakeMove();
+            }
+            catch (Exception ex)
+            {
+                string command = ex.Message;
+                var splitCommand = command.Split(new char[0]);
+                switch (splitCommand[0].ToLower())
+                {
+                    case "move":
+                        Console.WriteLine("Invalid coordinates. Please try again");
+                        break;
+                    case "restart":
+                        StartGame(game);
+                        break;
+                    case "exit":
+                        return;
+                    default:
+                        Console.WriteLine($"{splitCommand[0].ToLower()} is not a valid command");
+                        break;
+                }
             }
         }
     }
 
-    private bool ChooseGameMove()
+    public void StartGame(ReversoGameWithEvents game)
+    {
+        GameStarter starter = new GameStarter(game);
+        MoveCommandHandler moveHandler = new MoveCommandHandler();
+        if (ChooseGameMode())
+        {
+            starter.StartPvEGame(moveHandler);
+            return;
+        }
+        starter.StartPvPGame(moveHandler);
+        WriteInstruction();
+    }
+
+    private bool ChooseGameMode()
     {
         Console.WriteLine("PvP or PvE?");
         while (true)
@@ -60,5 +74,13 @@ public class ConsoleInput
             }
             Console.WriteLine("Invalid answer. PvP or PvE?");
         }
+    }
+
+    public void WriteInstruction()
+    {
+        Console.WriteLine("Commands:");
+        Console.WriteLine("move Y X - make a move");
+        Console.WriteLine("exit - close the game");
+        Console.WriteLine("restart - restart the game");
     }
 }

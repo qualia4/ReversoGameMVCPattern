@@ -20,3 +20,4 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/bin/Debug/net8.0/Reverso.View.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/obj/Debug/net8.0/Reverso.Starter.csproj.AssemblyReference.cache
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/obj/Debug/net8.0/Reverso.Starter.csproj.CopyComplete
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Starter/obj/Debug/net8.0/Reverso.Starter.sourcelink.json

@@ -12,21 +12,17 @@ public class ReversoGameWithEvents : ReversoGame
 
     public event Action<Dictionary<string, int>>? PointsUpdated;
 
-    public ReversoGameWithEvents(Player firstPlayer, Player secondPlayer) : base(firstPlayer, secondPlayer)
+    public override void StartGame(Player firstPlayer, Player secondPlayer)
     {
-    }
-
-    protected override void InitializeField()
-    {
-        base.InitializeField();
+        base.StartGame(firstPlayer, secondPlayer);
         FieldUpdated?.Invoke(GetField());
         PointsUpdated?.Invoke(GetPoints());
         GameStarted?.Invoke();
     }
 
-    protected override void ChangeField(int x, int y)
+    public override void ChangeField()
     {
-        base.ChangeField(x, y);
+        base.ChangeField();
         FieldUpdated?.Invoke(GetField());
         PointsUpdated?.Invoke(GetPoints());
     }
