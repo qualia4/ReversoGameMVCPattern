@@ -2,24 +2,24 @@ namespace Reverso.Model;
 
 public class HumanPlayer : Player
 {
-    private ICommandHandler CommandHandler;
+    private IInputHandler _inputHandler;
     public HumanPlayer(string name) : base(name)
     {
     }
 
-    public void SetCommandHandler(ICommandHandler commandHandler)
+    public void SetCommandHandler(IInputHandler inputHandler)
     {
-        CommandHandler = commandHandler;
+        _inputHandler = inputHandler;
     }
 
     public override int MakeMoveOnField(Field GameField)
     {
-        int[] coordinates = CommandHandler.GetPlayerCoords(GameField);
+        int[] coordinates = _inputHandler.GetPlayerCoords(GameField);
         return GameField.ChangeField(coordinates[0], coordinates[1], this);
     }
 }
 
-public interface ICommandHandler
+public interface IInputHandler
 {
     public int[] GetPlayerCoords(Field GameField);
 }

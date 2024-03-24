@@ -2,7 +2,7 @@ using Reverso.Model;
 
 namespace Reverso.Controller;
 
-public class MoveCommandHandler: ICommandHandler
+public class MoveInputHandler: IInputHandler
 {
     public int[] GetPlayerCoords(Field GameField)
     {

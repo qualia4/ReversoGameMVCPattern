@@ -4,13 +4,9 @@ public class ReversoGame()
 {
     private Player FirstPlayer;
     private Player SecondPlayer;
-    private const int FieldSize = 8;
-    private Field GameField { get; set; } = new Field();
+    private Field GameField { get; } = new Field();
     private Player? CurrentPlayer { get; set; }
-    private bool Ended { get; set; }
     protected Cell[,]? GetField() => GameField.GetCells();
-
-    Random rand = new Random();
 
 
     public void MakeMove()
@@ -29,18 +25,12 @@ public class ReversoGame()
 
     public virtual void StartGame(Player firstPlayer, Player secondPlayer)
     {
-        Ended = false;
         FirstPlayer = firstPlayer;
         SecondPlayer = secondPlayer;
         firstPlayer.ResetPoints();
         secondPlayer.ResetPoints();
         CurrentPlayer = firstPlayer;
         GameField.Initialize(firstPlayer, secondPlayer);
-    }
-
-    private bool IsInBounds(int x, int y)
-    {
-        return x is >= 0 and < FieldSize && y is >= 0 and < FieldSize;
     }
 
     private void CheckGameEnd()
@@ -64,7 +54,6 @@ public class ReversoGame()
 
     protected virtual void EndGame()
     {
-        Ended = true;
     }
 
     private void RedistributePoints(int points)

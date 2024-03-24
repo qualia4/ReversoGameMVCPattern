@@ -10,20 +10,20 @@ public class GameStarter
         this.game = game;
     }
 
-    public void StartPvEGame(ICommandHandler playerCommandHandler)
+    public void StartPvEGame(IInputHandler playerInputHandler)
     {
         HumanPlayer firstPlayer = new HumanPlayer("A");
         AIPlayer secondPlayer = new AIPlayer("B");
-        firstPlayer.SetCommandHandler(playerCommandHandler);
+        firstPlayer.SetCommandHandler(playerInputHandler);
         game.StartGame(firstPlayer, secondPlayer);
     }
 
-    public void StartPvPGame(ICommandHandler playerCommandHandler)
+    public void StartPvPGame(IInputHandler playerInputHandler)
     {
         HumanPlayer firstPlayer = new HumanPlayer("A");
         HumanPlayer secondPlayer = new HumanPlayer("B");
-        firstPlayer.SetCommandHandler(playerCommandHandler);
-        secondPlayer.SetCommandHandler(playerCommandHandler);
+        firstPlayer.SetCommandHandler(playerInputHandler);
+        secondPlayer.SetCommandHandler(playerInputHandler);
         game.StartGame(firstPlayer, secondPlayer);
     }
 }

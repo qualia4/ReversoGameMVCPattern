@@ -47,11 +47,6 @@ public class Field
         int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };
         int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
-        if (Cells == null)
-        {
-            throw new Exception("Field hasn't been initialized yet.");
-        }
-
         if (!Cells[x, y].IfEmpty || !IsInBounds(x, y))
         {
             return false;

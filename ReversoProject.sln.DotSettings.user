@@ -8,9 +8,10 @@
     &lt;TestId&gt;NUnit3x::51C1B503-65D6-43DD-B4D9-CC9F78D70C5A::net8.0::ReversoGame.Model.Tests.Tests.MakeMove_WithInvalidCoordinates_DoesNotChangeField&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9ef1a38b_002De4e6_002D4971_002D9435_002Db719870f3618/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from UnitTest1.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;ProjectFile&gt;51C1B503-65D6-43DD-B4D9-CC9F78D70C5A/f:ModelTests.cs&lt;/ProjectFile&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9962b0eb_002Dc559_002D4e51_002Db28f_002D6e35e907739a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from ReversoModelTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;51C1B503-65D6-43DD-B4D9-CC9F78D70C5A/f:ReversoModelTests.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b0440b88_002D34a8_002D4612_002D8cf3_002D8b611b7b9744/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MakeMove_WithInvalidCoordinates_DoesNotChangeField" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::51C1B503-65D6-43DD-B4D9-CC9F78D70C5A::net8.0::ReversoGame.Model.Tests.Tests.MakeMove_WithInvalidCoordinates_DoesNotChangeField&lt;/TestId&gt;

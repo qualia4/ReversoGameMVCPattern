@@ -17,6 +17,7 @@ public class ConsoleInput
             default:
                 return;
         }
+
         while (true)
         {
             try
@@ -48,7 +49,7 @@ public class ConsoleInput
     public void StartGame(ReversoGameWithEvents game)
     {
         GameStarter starter = new GameStarter(game);
-        MoveCommandHandler moveHandler = new MoveCommandHandler();
+        MoveInputHandler moveHandler = new MoveInputHandler();
         if (ChooseGameMode())
         {
             starter.StartPvEGame(moveHandler);
