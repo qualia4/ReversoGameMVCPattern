@@ -5,20 +5,37 @@ using Reverso.Model;
 
 public class ConsoleInput
 {
-    public void StartProcessing(ReversoGameWithEvents game)
-    {
-        Console.WriteLine("Welcome to the ReversoGame!");
-        Console.WriteLine("Type START to play or anything else to close the game!");
-        switch (Console.ReadLine().ToLower())
-        {
-            case "start":
-                StartGame(game);
-                break;
-            default:
-                return;
-        }
+    private ReversoGameWithEvents game;
+    private GameStarter Starter;
 
+    public ConsoleInput(ReversoGameWithEvents game)
+    {
+        this.game = game;
+        Starter = new GameStarter(game);
+    }
+
+    public void StartingMenu()
+    {
         while (true)
+        {
+            Console.WriteLine("Type START to play or anything else to close the game!");
+            switch (Console.ReadLine()?.ToLower())
+            {
+                case "start":
+                    Starter.StartGame();
+                    StartProcessing();
+                    break;
+                default:
+                    return;
+            }
+        }
+    }
+
+    private void StartProcessing()
+    {
+        WriteInstruction();
+
+        while (!game.GetEnded())
         {
             try
             {
@@ -34,7 +51,8 @@ public class ConsoleInput
                         Console.WriteLine("Invalid coordinates. Please try again");
                         break;
                     case "restart":
-                        StartGame(game);
+                        Starter.StartGame();
+                        WriteInstruction();
                         break;
                     case "exit":
                         return;
@@ -46,38 +64,7 @@ public class ConsoleInput
         }
     }
 
-    public void StartGame(ReversoGameWithEvents game)
-    {
-        GameStarter starter = new GameStarter(game);
-        MoveInputHandler moveHandler = new MoveInputHandler();
-        if (ChooseGameMode())
-        {
-            starter.StartPvEGame(moveHandler);
-            return;
-        }
-        starter.StartPvPGame(moveHandler);
-        WriteInstruction();
-    }
-
-    private bool ChooseGameMode()
-    {
-        Console.WriteLine("PvP or PvE?");
-        while (true)
-        {
-            string responce = Console.ReadLine().ToLower();
-            if (responce == "pve")
-            {
-                return true;
-            }
-            else if (responce == "pvp")
-            {
-                return false;
-            }
-            Console.WriteLine("Invalid answer. PvP or PvE?");
-        }
-    }
-
-    public void WriteInstruction()
+    private void WriteInstruction()
     {
         Console.WriteLine("Commands:");
         Console.WriteLine("move Y X - make a move");

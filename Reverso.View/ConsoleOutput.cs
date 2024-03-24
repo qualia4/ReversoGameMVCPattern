@@ -29,7 +29,6 @@ public class ConsoleOutput
         {
             Console.WriteLine($"Player {winner.GetName()} won with {winner.GetPoints()} points!");
         }
-        Console.WriteLine("Type RESTART to play again or EXIT to finish!");
     }
 
     private void OnFieldUpdated(Cell[,]? field)

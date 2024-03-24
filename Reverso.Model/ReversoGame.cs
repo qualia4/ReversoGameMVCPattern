@@ -5,6 +5,7 @@ public class ReversoGame()
     private Player FirstPlayer;
     private Player SecondPlayer;
     private Field GameField { get; } = new Field();
+    private bool Ended { get; set; }
     private Player? CurrentPlayer { get; set; }
     protected Cell[,]? GetField() => GameField.GetCells();
 
@@ -25,6 +26,7 @@ public class ReversoGame()
 
     public virtual void StartGame(Player firstPlayer, Player secondPlayer)
     {
+        Ended = false;
         FirstPlayer = firstPlayer;
         SecondPlayer = secondPlayer;
         firstPlayer.ResetPoints();
@@ -54,6 +56,12 @@ public class ReversoGame()
 
     protected virtual void EndGame()
     {
+        Ended = true;
+    }
+
+    public bool GetEnded()
+    {
+        return Ended;
     }
 
     private void RedistributePoints(int points)

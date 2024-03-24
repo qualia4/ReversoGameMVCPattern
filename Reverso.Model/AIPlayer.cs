@@ -11,8 +11,6 @@ public class AIPlayer: Player
     public override int MakeMoveOnField(Field GameField)
     {
         int[] coordinates = GenerateRandomMove(GameField);
-        int delay = rand.Next(1, 4);
-        Thread.Sleep((int)TimeSpan.FromSeconds(delay).TotalMilliseconds);
         return GameField.ChangeField(coordinates[0], coordinates[1], this);
     }
 
@@ -25,8 +23,11 @@ public class AIPlayer: Player
             if (GameField.GetValid(x, y))
             {
                 int[] coords = new int[2] {x, y};
+                int delay = rand.Next(1, 3);
+                Thread.Sleep((int)TimeSpan.FromSeconds(delay).TotalMilliseconds);
                 return coords;
             }
         }
+
     }
 }
