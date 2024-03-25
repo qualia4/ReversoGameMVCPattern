@@ -48,7 +48,7 @@ public class GameController
                 switch (splitCommand[0].ToLower())
                 {
                     case "move":
-                        Console.WriteLine("Invalid coordinates. Please try again");
+                        Console.WriteLine("Invalid move. Please try again");
                         break;
                     case "restart":
                         Starter.StartGame();

@@ -5,9 +5,9 @@ using Reverso.Model;
 
 public class GameStarter
 {
-    private ITwoPlayerGame game;
+    private ITwoPlayerStartable game;
 
-    public GameStarter(ITwoPlayerGame game)
+    public GameStarter(ITwoPlayerStartable game)
     {
         this.game = game;
     }
