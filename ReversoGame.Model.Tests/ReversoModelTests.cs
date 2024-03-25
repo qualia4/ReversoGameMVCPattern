@@ -7,9 +7,24 @@ using System.Collections.Generic;
 public class ReversoModelTests
 {
     [Test]
+    public void MakeMove_BeforeStartGame_DoesThrowException()
+    {
+        var game = new ReversoGame();
+        try
+        {
+            game.MakeMove();
+            Assert.Fail();
+        }
+        catch
+        {
+            Assert.Pass();
+        }
+    }
+
+    [Test]
     public void MakeMove_WhenHumanPlayer_DoesMakeMove()
     {
-        var game = new ReversoGameWithEvents();
+        var game = new ReversoGame();
         TestMovesHandler movesHandler = new TestMovesHandler();
         HumanPlayer firstPlayer = new HumanPlayer("A", movesHandler);
         AIPlayer secondPlayer = new AIPlayer("B");
@@ -24,7 +39,7 @@ public class ReversoModelTests
     [Test]
     public void MakeMove_WhenBot_DoesMakeMove()
     {
-        var game = new ReversoGameWithEvents();
+        var game = new ReversoGame();
         AIPlayer firstPlayer = new AIPlayer("A");
         AIPlayer secondPlayer = new AIPlayer("B");
         game.StartGame(firstPlayer, secondPlayer);
@@ -38,7 +53,7 @@ public class ReversoModelTests
     [Test]
     public void MakeMoves_FirstPlayerWins_WithThirteenPoints()
     {
-        var game = new ReversoGameWithEvents();
+        var game = new ReversoGame();
         TestMovesHandler movesHandler = new TestMovesHandler();
         HumanPlayer firstPlayer = new HumanPlayer("A", movesHandler);
         HumanPlayer secondPlayer = new HumanPlayer("B", movesHandler);
@@ -56,11 +71,11 @@ public class ReversoModelTests
     }
 
     [Test]
-    public void StartGame_InvokesEvents()
+    public void StartGame_InvokesEvent()
     {
         var game = new ReversoGameWithEvents();
-        AIPlayer firstPlayer = new AIPlayer("A");
-        AIPlayer secondPlayer = new AIPlayer("B");
+        AIPlayer firstPlayer = new AIPlayer("A", false);
+        AIPlayer secondPlayer = new AIPlayer("B", false);
         bool gameStartedEventRaised = false;
         game.GameStarted += () => gameStartedEventRaised = true;
 
@@ -74,8 +89,8 @@ public class ReversoModelTests
     public void MakeMove_InvokesEvents()
     {
         var game = new ReversoGameWithEvents();
-        AIPlayer firstPlayer = new AIPlayer("A");
-        AIPlayer secondPlayer = new AIPlayer("B");
+        AIPlayer firstPlayer = new AIPlayer("A", false);
+        AIPlayer secondPlayer = new AIPlayer("B", false);
         bool fieldUpdatedEventRaised = false;
         bool pointsUpdatedEventRaised = false;
         game.FieldUpdated += (field) => fieldUpdatedEventRaised = true;
@@ -87,26 +102,22 @@ public class ReversoModelTests
         Assert.IsTrue(fieldUpdatedEventRaised);
         Assert.IsTrue(pointsUpdatedEventRaised);
     }
-}
 
-public class TestMovesHandler : IInputHandler
-{
-    private int moveIndex;
-    private int[,] moves =  { { 5, 4 }, { 3, 5 }, { 2, 4 }, { 5, 5 }, {4, 6}, {5, 3}, {6, 4}, {4, 5}, {4, 2} };
+    [Test]
+    public void EndGame_InvokesEvent()
+    {
+        var game = new ReversoGameWithEvents();
+        AIPlayer firstPlayer = new AIPlayer("A", false);
+        AIPlayer secondPlayer = new AIPlayer("B", false);
+        bool gameEndedEventRaised = false;
+        game.GameEnded += (player) => gameEndedEventRaised = true;
+        game.StartGame(firstPlayer, secondPlayer);
 
-    public TestMovesHandler()
-    {
-        moveIndex = 0;
-    }
-    public int[] GetPlayerCoords(Field GameField)
-    {
-        int[] coords = new int[2] {moves[moveIndex, 0], moves[moveIndex, 1]};
-        moveIndex++;
-        return coords;
-    }
+        while (!game.GetEnded())
+        {
+            game.MakeMove();
+        }
 
-    public int GetMovesLength()
-    {
-        return moves.GetLength(0);
+        Assert.IsTrue(gameEndedEventRaised);
     }
 }

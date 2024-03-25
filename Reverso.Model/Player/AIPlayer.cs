@@ -3,9 +3,11 @@ namespace Reverso.Model;
 public class AIPlayer: Player
 {
     Random rand = new Random();
+    private bool makeDelay;
 
-    public AIPlayer(string name) : base(name)
+    public AIPlayer(string name, bool makeDelay = true) : base(name)
     {
+        this.makeDelay = makeDelay;
     }
 
     public override int MakeMoveOnField(Field GameField)
@@ -23,8 +25,11 @@ public class AIPlayer: Player
             if (GameField.GetValid(x, y))
             {
                 int[] coords = new int[2] {x, y};
-                int delay = rand.Next(1, 3);
-                Thread.Sleep((int)TimeSpan.FromSeconds(delay).TotalMilliseconds);
+                if (makeDelay)
+                {
+                    int delay = rand.Next(1, 3);
+                    Thread.Sleep((int)TimeSpan.FromSeconds(delay).TotalMilliseconds);
+                }
                 return coords;
             }
         }
