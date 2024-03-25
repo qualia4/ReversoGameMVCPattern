@@ -9,7 +9,6 @@ public class ReversoGame : ITwoPlayerGame
     private Player? CurrentPlayer { get; set; }
     protected Cell[,]? GetField() => GameField.GetCells();
 
-
     public void MakeMove()
     {
         CheckGameStarted();

@@ -17,6 +17,31 @@ public class ConsoleOutput
         game.GameEnded += OnGameEnded;
     }
 
+    private void OnGameStarted()
+    {
+        Console.WriteLine("Game started!");
+    }
+
+    private void OnFieldUpdated(Cell[,] field)
+    {
+        Console.Clear();
+        DrawXCoords(field.GetLength(0));
+        DrawBorder(field.GetLength(0));
+        DrawField(field);
+        DrawBorder(field.GetLength(0));
+    }
+
+    private void OnPointsUpdated(Dictionary<string, int> players)
+    {
+        Console.Write("            ");
+        foreach (var player in players)
+        {
+            Console.Write($"{player.Key}:{player.Value}   ");
+        }
+        Console.WriteLine(" ");
+        Console.WriteLine(" ");
+    }
+
     private void OnGameEnded(Player? winner)
     {
         Console.WriteLine("Game is over!");
@@ -31,17 +56,31 @@ public class ConsoleOutput
         }
     }
 
-    private void OnFieldUpdated(Cell[,]? field)
+    private void DrawXCoords(int fieldLength)
     {
-        Console.Write("   ");
-        for (int cord = 0; cord < 8; cord++)
+        Console.Write("     ");
+        for (int cord = 0; cord < fieldLength; cord++)
         {
             Console.Write($" {cord} ");
         }
         Console.WriteLine();
-        for (int i = 0; i < 8; i++)
+    }
+
+    private void DrawBorder(int fieldLength)
+    {
+        Console.Write("     ");
+        for (int cord = 0; cord < fieldLength; cord++)
         {
-            Console.Write($" {i} ");
+            Console.Write($"===");
+        }
+        Console.WriteLine();
+    }
+
+    private void DrawField(Cell[,] field)
+    {
+        for (int i = 0; i < field.GetLength(1); i++)
+        {
+            Console.Write($" {i} | ");
             for (int j = 0; j < 8; j++)
             {
                 if (field[i, j].IfEmpty)
@@ -62,18 +101,5 @@ public class ConsoleOutput
             }
             Console.WriteLine(" ");
         }
-    }
-
-    private void OnPointsUpdated(Dictionary<string, int> players)
-    {
-        foreach (var player in players)
-        {
-            Console.WriteLine($"{player.Key}:{player.Value}");
-        }
-    }
-
-    private void OnGameStarted()
-    {
-        Console.WriteLine("Game started!");
     }
 }
