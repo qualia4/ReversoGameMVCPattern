@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reverso.Controller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a2a1848d9cf9f62bc65bba76d48ff6a3dc364ac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd6a2e8b0cb3408d364c203eec718fcdbd52beca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reverso.Controller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reverso.Controller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

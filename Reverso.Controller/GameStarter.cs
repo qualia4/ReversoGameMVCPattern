@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Reverso.Controller;
 using Reverso.Model;
 
@@ -37,8 +39,9 @@ public class GameStarter
 
     private void StartPvEGame(IInputHandler playerInputHandler)
     {
+        bool delay = AskDelay();
         HumanPlayer firstPlayer = new HumanPlayer("A", playerInputHandler);
-        AIPlayer secondPlayer = new AIPlayer("B");
+        AIPlayer secondPlayer = new AIPlayer("B", delay);
         game.StartGame(firstPlayer, secondPlayer);
     }
 
@@ -51,8 +54,24 @@ public class GameStarter
 
     private void StartEveGame()
     {
-        AIPlayer firstPlayer = new AIPlayer("A");
-        AIPlayer secondPlayer = new AIPlayer("B");
+        bool delay = AskDelay();
+        AIPlayer firstPlayer = new AIPlayer("A", delay);
+        AIPlayer secondPlayer = new AIPlayer("B", delay);
         game.StartGame(firstPlayer, secondPlayer);
+    }
+
+    private bool AskDelay()
+    {
+        Console.WriteLine("Do you want bot with delay? y/n");
+        while (true)
+        {
+            switch (Console.ReadLine()?.ToLower())
+            {
+                case "y":
+                    return true;
+                case "n":
+                    return false;
+            }
+        }
     }
 }
