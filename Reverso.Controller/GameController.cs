@@ -3,12 +3,12 @@ namespace Reverso.Controller;
 using System;
 using Reverso.Model;
 
-public class ConsoleInput
+public class GameController
 {
-    private ReversoGameWithEvents game;
+    private ITwoPlayerGame game;
     private GameStarter Starter;
 
-    public ConsoleInput(ReversoGameWithEvents game)
+    public GameController(ITwoPlayerGame game)
     {
         this.game = game;
         Starter = new GameStarter(game);

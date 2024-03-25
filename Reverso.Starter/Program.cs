@@ -6,7 +6,7 @@ var game = new ReversoGameWithEvents();
 var output = new ConsoleOutput();
 output.ListenTo(game);
 
-var input = new ConsoleInput(game);
+var input = new GameController(game);
 input.StartingMenu();
 
 

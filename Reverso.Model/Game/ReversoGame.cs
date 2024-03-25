@@ -1,9 +1,9 @@
 namespace Reverso.Model;
 
-public class ReversoGame()
+public class ReversoGame : ITwoPlayerGame
 {
-    private Player FirstPlayer;
-    private Player SecondPlayer;
+    private Player? FirstPlayer;
+    private Player? SecondPlayer;
     private Field GameField { get; } = new Field();
     private bool Ended { get; set; }
     private Player? CurrentPlayer { get; set; }
@@ -12,12 +12,14 @@ public class ReversoGame()
 
     public void MakeMove()
     {
+        CheckGameStarted();
         ChangeField();
         CheckGameEnd();
     }
 
-    public virtual void ChangeField()
+    protected virtual void ChangeField()
     {
+        CheckGameStarted();
         int pointsToChange = CurrentPlayer.MakeMoveOnField(GameField);
         RedistributePoints(pointsToChange);
         SwitchPlayer();
@@ -41,11 +43,13 @@ public class ReversoGame()
         {
             return;
         }
+
         EndGame();
     }
 
-    public Dictionary<string, int> GetPoints()
+    public Dictionary<string, int>? GetPoints()
     {
+        CheckGameStarted();
         var players = new Dictionary<string, int>()
         {
             {FirstPlayer.GetName(), FirstPlayer.GetPoints()},
@@ -56,36 +60,46 @@ public class ReversoGame()
 
     protected virtual void EndGame()
     {
+        CheckGameStarted();
         Ended = true;
-    }
-
-    public bool GetEnded()
-    {
-        return Ended;
     }
 
     private void RedistributePoints(int points)
     {
         if (CurrentPlayer == FirstPlayer)
         {
-            SecondPlayer.RemovePoints(points);
-            FirstPlayer.AddPoints(points);
+            SecondPlayer?.RemovePoints(points);
+            FirstPlayer?.AddPoints(points);
             return;
         }
-        FirstPlayer.RemovePoints(points);
-        SecondPlayer.AddPoints(points);
+
+        FirstPlayer?.RemovePoints(points);
+        SecondPlayer?.AddPoints(points);
     }
 
     public Player? GetWinner()
     {
-        return (FirstPlayer.GetPoints() > SecondPlayer.GetPoints()) ?
-            FirstPlayer : (SecondPlayer.GetPoints() > FirstPlayer.GetPoints()) ?
-                SecondPlayer : null;
+        CheckGameStarted();
+        return (FirstPlayer?.GetPoints() > SecondPlayer?.GetPoints()) ? FirstPlayer :
+            (SecondPlayer?.GetPoints() > FirstPlayer?.GetPoints()) ? SecondPlayer : null;
     }
 
     private void SwitchPlayer()
     {
         CurrentPlayer = CurrentPlayer == FirstPlayer ? SecondPlayer : FirstPlayer;
+    }
+
+    private void CheckGameStarted()
+    {
+        if (FirstPlayer == null || SecondPlayer == null)
+        {
+            throw new Exception("Game has not been started");
+        }
+    }
+
+    public bool GetEnded()
+    {
+        return Ended;
     }
 
 }

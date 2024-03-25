@@ -11,8 +11,7 @@ public class ReversoModelTests
     {
         var game = new ReversoGameWithEvents();
         TestMovesHandler movesHandler = new TestMovesHandler();
-        HumanPlayer firstPlayer = new HumanPlayer("A");
-        firstPlayer.SetCommandHandler(movesHandler);
+        HumanPlayer firstPlayer = new HumanPlayer("A", movesHandler);
         AIPlayer secondPlayer = new AIPlayer("B");
         game.StartGame(firstPlayer, secondPlayer);
         var startingPoints = firstPlayer.GetPoints();
@@ -41,10 +40,8 @@ public class ReversoModelTests
     {
         var game = new ReversoGameWithEvents();
         TestMovesHandler movesHandler = new TestMovesHandler();
-        HumanPlayer firstPlayer = new HumanPlayer("A");
-        HumanPlayer secondPlayer = new HumanPlayer("B");
-        firstPlayer.SetCommandHandler(movesHandler);
-        secondPlayer.SetCommandHandler(movesHandler);
+        HumanPlayer firstPlayer = new HumanPlayer("A", movesHandler);
+        HumanPlayer secondPlayer = new HumanPlayer("B", movesHandler);
         game.StartGame(firstPlayer, secondPlayer);
 
         //Moves that should result in game ending with A winning

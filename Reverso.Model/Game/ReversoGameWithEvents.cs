@@ -20,7 +20,7 @@ public class ReversoGameWithEvents : ReversoGame
         GameStarted?.Invoke();
     }
 
-    public override void ChangeField()
+    protected override void ChangeField()
     {
         base.ChangeField();
         FieldUpdated?.Invoke(GetField());

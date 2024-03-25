@@ -3,11 +3,7 @@ namespace Reverso.Model;
 public class HumanPlayer : Player
 {
     private IInputHandler _inputHandler;
-    public HumanPlayer(string name) : base(name)
-    {
-    }
-
-    public void SetCommandHandler(IInputHandler inputHandler)
+    public HumanPlayer(string name, IInputHandler inputHandler) : base(name)
     {
         _inputHandler = inputHandler;
     }

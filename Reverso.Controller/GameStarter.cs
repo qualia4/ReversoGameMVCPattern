@@ -3,9 +3,9 @@ using Reverso.Model;
 
 public class GameStarter
 {
-    private ReversoGameWithEvents game;
+    private ITwoPlayerGame game;
 
-    public GameStarter(ReversoGameWithEvents game)
+    public GameStarter(ITwoPlayerGame game)
     {
         this.game = game;
     }
@@ -37,18 +37,15 @@ public class GameStarter
 
     private void StartPvEGame(IInputHandler playerInputHandler)
     {
-        HumanPlayer firstPlayer = new HumanPlayer("A");
+        HumanPlayer firstPlayer = new HumanPlayer("A", playerInputHandler);
         AIPlayer secondPlayer = new AIPlayer("B");
-        firstPlayer.SetCommandHandler(playerInputHandler);
         game.StartGame(firstPlayer, secondPlayer);
     }
 
     private void StartPvPGame(IInputHandler playerInputHandler)
     {
-        HumanPlayer firstPlayer = new HumanPlayer("A");
-        HumanPlayer secondPlayer = new HumanPlayer("B");
-        firstPlayer.SetCommandHandler(playerInputHandler);
-        secondPlayer.SetCommandHandler(playerInputHandler);
+        HumanPlayer firstPlayer = new HumanPlayer("A", playerInputHandler);
+        HumanPlayer secondPlayer = new HumanPlayer("B", playerInputHandler);
         game.StartGame(firstPlayer, secondPlayer);
     }
 
