@@ -1,4 +1,4 @@
-﻿using Reverso.Model;
+﻿using Reverso.Model.Game;
 using Reverso.View;
 using Reverso.Controller;
 

@@ -1,4 +1,4 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Abstractions;
 
 public interface IHasName
 {

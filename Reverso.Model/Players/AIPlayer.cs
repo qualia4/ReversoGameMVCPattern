@@ -1,4 +1,5 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Players;
+using Abstractions;
 
 public class AIPlayer: Player
 {
@@ -10,19 +11,19 @@ public class AIPlayer: Player
         this.makeDelay = makeDelay;
     }
 
-    public override int MakeMoveOnField(Field GameField)
+    public override int MakeMoveOnField(IGameField gameReversoField)
     {
-        int[] coordinates = GenerateRandomMove(GameField);
-        return GameField.ChangeField(coordinates[0], coordinates[1], this);
+        int[] coordinates = GenerateRandomMove(gameReversoField);
+        return gameReversoField.ChangeField(coordinates[0], coordinates[1], this);
     }
 
-    private int[] GenerateRandomMove(Field GameField)
+    private int[] GenerateRandomMove(IGameField gameReversoField)
     {
         while (true)
         {
-            int x = rand.Next(0, 8);
-            int y = rand.Next(0, 8);
-            if (GameField.GetValid(x, y))
+            int x = rand.Next(0, gameReversoField.GetSize());
+            int y = rand.Next(0, gameReversoField.GetSize());
+            if (gameReversoField.IsValidCell(x, y))
             {
                 int[] coords = new int[] {x, y};
                 if (makeDelay)

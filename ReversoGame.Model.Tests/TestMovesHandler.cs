@@ -1,6 +1,5 @@
-using Reverso.Model;
-
 namespace ReversoGame.Model.Tests;
+using Reverso.Model.Abstractions;
 
 public class TestMovesHandler : IInputHandler
 {
@@ -11,7 +10,7 @@ public class TestMovesHandler : IInputHandler
     {
         moveIndex = 0;
     }
-    public int[] GetPlayerCoords(Field GameField)
+    public int[] GetPlayerCoords(IGameField gameField)
     {
         int[] coords = new int[] {moves[moveIndex, 0], moves[moveIndex, 1]};
         moveIndex++;

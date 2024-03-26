@@ -1,5 +1,6 @@
 namespace ReversoGame.Model.Tests;
-using Reverso.Model;
+using Reverso.Model.Game;
+using Reverso.Model.Players;
 
 public class ReversoModelTests
 {

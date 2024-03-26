@@ -1,4 +1,4 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Abstractions;
 
 public abstract class Player: IHasName
 {
@@ -36,6 +36,6 @@ public abstract class Player: IHasName
         return Name;
     }
 
-    public abstract int MakeMoveOnField(Field GameField);
+    public abstract int MakeMoveOnField(IGameField gameField);
 
 }

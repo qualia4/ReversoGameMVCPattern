@@ -1,10 +1,10 @@
-using Reverso.Model;
+using Reverso.Model.Abstractions;
 
 namespace Reverso.Controller;
 
 public class MoveInputHandler: IInputHandler
 {
-    public int[] GetPlayerCoords(Field GameField)
+    public int[] GetPlayerCoords(IGameField gameField)
     {
         string command = Console.ReadLine().ToLower();
         var splitCommand = command.Split(Array.Empty<char>());
@@ -12,12 +12,11 @@ public class MoveInputHandler: IInputHandler
         {
             int x = int.Parse(splitCommand[1]);
             int y = int.Parse(splitCommand[2]);
-            if(GameField.IsInBounds(x, y) && GameField.GetValid(x, y))
+            if(gameField.IsInBounds(x, y) && gameField.IsValidCell(x, y))
             {
                 int[] coords = new int[] {x, y};
                 return coords;
             }
-
         }
         throw new Exception(command);
     }

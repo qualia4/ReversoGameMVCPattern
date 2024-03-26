@@ -1,13 +1,15 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Game;
+using GameInterfaces;
+using Abstractions;
 
 public class ReversoGame : ITwoPlayerGame
 {
     private Player? FirstPlayer;
     private Player? SecondPlayer;
     private Player? CurrentPlayer { get; set; }
-    private Field GameField { get; } = new Field();
+    private ReversoField ReversoGameField { get; } = new ReversoField();
     private bool Ended { get; set; }
-    protected Cell[,] GetField() => GameField.GetCells();
+    protected Cell[,] GetField() => ReversoGameField.GetCells();
 
     public void MakeMove()
     {
@@ -19,10 +21,10 @@ public class ReversoGame : ITwoPlayerGame
     protected virtual void ChangeField()
     {
         CheckGameStarted();
-        int pointsToChange = CurrentPlayer.MakeMoveOnField(GameField);
+        int pointsToChange = CurrentPlayer.MakeMoveOnField(ReversoGameField);
         RedistributePoints(pointsToChange);
         SwitchPlayer();
-        GameField.ChangeValid(CurrentPlayer);
+        ReversoGameField.ChangeValid(CurrentPlayer);
     }
 
     public virtual void StartGame(Player firstPlayer, Player secondPlayer)
@@ -33,12 +35,12 @@ public class ReversoGame : ITwoPlayerGame
         firstPlayer.ResetPoints();
         secondPlayer.ResetPoints();
         CurrentPlayer = firstPlayer;
-        GameField.Initialize(firstPlayer, secondPlayer);
+        ReversoGameField.Initialize(firstPlayer, secondPlayer);
     }
 
     private void CheckGameEnd()
     {
-        if (GameField.HasValidMoves())
+        if (ReversoGameField.HasValidMoves())
         {
             return;
         }

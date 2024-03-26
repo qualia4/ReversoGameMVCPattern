@@ -1,5 +1,6 @@
 namespace Reverso.Controller;
-using Model;
+using Model.Players;
+using Model.GameInterfaces;
 
 public class GameStarter
 {
@@ -35,7 +36,7 @@ public class GameStarter
     }
 
 
-    private void StartPvEGame(IInputHandler playerInputHandler)
+    private void StartPvEGame(MoveInputHandler playerInputHandler)
     {
         bool delay = AskDelay();
         HumanPlayer firstPlayer = new HumanPlayer("A", playerInputHandler);
@@ -43,7 +44,7 @@ public class GameStarter
         game.StartGame(firstPlayer, secondPlayer);
     }
 
-    private void StartPvPGame(IInputHandler playerInputHandler)
+    private void StartPvPGame(MoveInputHandler playerInputHandler)
     {
         HumanPlayer firstPlayer = new HumanPlayer("A", playerInputHandler);
         HumanPlayer secondPlayer = new HumanPlayer("B", playerInputHandler);

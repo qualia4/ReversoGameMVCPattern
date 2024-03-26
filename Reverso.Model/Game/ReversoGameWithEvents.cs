@@ -1,4 +1,5 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Game;
+using Abstractions;
 
 using System;
 

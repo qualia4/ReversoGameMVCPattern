@@ -1,4 +1,5 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Game;
+using Model.Abstractions;
 
 public class Cell
 {

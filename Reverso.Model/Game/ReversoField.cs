@@ -1,11 +1,12 @@
-namespace Reverso.Model;
+namespace Reverso.Model.Game;
+using Abstractions;
 
-public class Field
+public class ReversoField: IGameField
 {
     private const int FieldSize = 8;
     private Cell[,] Cells { get; set; }
 
-    public Field()
+    public ReversoField()
     {
         Cells = new Cell[FieldSize, FieldSize];
         for (var x = 0; x < FieldSize; x++)
@@ -158,9 +159,14 @@ public class Field
         return Cells;
     }
 
-    public bool GetValid(int x, int y)
+    public bool IsValidCell(int x, int y)
     {
         return Cells[x, y].IfValid;
+    }
+
+    public int GetSize()
+    {
+        return FieldSize;
     }
 
 

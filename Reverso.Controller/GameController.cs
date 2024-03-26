@@ -1,7 +1,6 @@
 namespace Reverso.Controller;
-
+using Model.GameInterfaces;
 using System;
-using Model;
 
 public class GameController
 {

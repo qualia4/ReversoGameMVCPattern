@@ -1,4 +1,5 @@
-using Reverso.Model;
+using Reverso.Model.Game;
+using Reverso.Model.Abstractions;
 
 namespace Reverso.View;
 
