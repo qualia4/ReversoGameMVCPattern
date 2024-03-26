@@ -1,6 +1,5 @@
-using Reverso.Model.Abstractions;
-
 namespace Reverso.Controller;
+using Model.Abstractions;
 
 public class MoveInputHandler: IInputHandler
 {
