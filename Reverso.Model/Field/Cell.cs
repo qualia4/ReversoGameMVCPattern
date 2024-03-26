@@ -3,7 +3,7 @@ namespace Reverso.Model;
 public class Cell
 {
     private bool IsEmpty { get; set; } = true;
-    private bool IsValid { get; set; } = false;
+    private bool IsValid { get; set; }
     private IHasName? Host { get; set; }
     public bool IfEmpty => IsEmpty;
     public bool IfValid => IsValid;

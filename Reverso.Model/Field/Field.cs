@@ -5,6 +5,18 @@ public class Field
     private const int FieldSize = 8;
     private Cell[,] Cells { get; set; }
 
+    public Field()
+    {
+        Cells = new Cell[FieldSize, FieldSize];
+        for (var x = 0; x < FieldSize; x++)
+        {
+            for (var y = 0; y < FieldSize; y++)
+            {
+                Cells[x, y] = new Cell();
+            }
+        }
+    }
+
     public void Initialize(Player firstPlayer, Player secondPlayer)
     {
         Cells = new Cell[FieldSize, FieldSize];
@@ -30,19 +42,12 @@ public class Field
         {
             for (int y = 0; y < FieldSize; y++)
             {
-                if (IsValidMove(x, y, CurrentPlayer))
-                {
-                    Cells[x, y].SetValid(true);
-                }
-                else
-                {
-                    Cells[x, y].SetValid(false);
-                }
+                Cells[x, y].SetValid(IsValidMove(x, y, CurrentPlayer));
             }
         }
     }
 
-    public bool IsValidMove(int x, int y, Player CurrentPlayer)
+    private bool IsValidMove(int x, int y, Player CurrentPlayer)
     {
         int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };
         int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
@@ -62,7 +67,7 @@ public class Field
         return false;
     }
 
-    public bool IsValidDirection(int x, int y, int dirX, int dirY, Player CurrentPlayer)
+    private bool IsValidDirection(int x, int y, int dirX, int dirY, Player CurrentPlayer)
     {
         bool foundOpponent = false;
         while (true)
@@ -122,7 +127,7 @@ public class Field
         int y = startY + dy;
         int pointsToRedistribute = 0;
 
-        while (IsInBounds(x, y) && Cells?[x, y].IfEmpty == false &&
+        while (IsInBounds(x, y) && Cells[x, y].IfEmpty == false &&
                Cells[x, y].GetHost() != CurrentPlayer)
         {
             Cells[x, y].Rehost(CurrentPlayer);
@@ -135,7 +140,7 @@ public class Field
 
     public bool HasValidMoves()
     {
-        for (var x = 0; x < Cells?.GetLength(0); x++)
+        for (var x = 0; x < Cells.GetLength(0); x++)
         {
             for (var y = 0; y < Cells.GetLength(1); y++)
             {

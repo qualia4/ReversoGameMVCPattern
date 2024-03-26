@@ -1,8 +1,5 @@
 namespace ReversoGame.Model.Tests;
-using NUnit.Framework;
 using Reverso.Model;
-using System;
-using System.Collections.Generic;
 
 public class ReversoModelTests
 {
@@ -33,7 +30,7 @@ public class ReversoModelTests
 
         game.MakeMove();
 
-        Assert.AreNotEqual(startingPoints, firstPlayer.GetPoints());
+        Assert.That(firstPlayer.GetPoints(), Is.Not.EqualTo(startingPoints));
     }
 
     [Test]
@@ -47,7 +44,7 @@ public class ReversoModelTests
 
         game.MakeMove();
 
-        Assert.AreNotEqual(startingPoints, firstPlayer.GetPoints());
+        Assert.That(firstPlayer.GetPoints(), Is.Not.EqualTo(startingPoints));
     }
 
     [Test]
@@ -58,16 +55,17 @@ public class ReversoModelTests
         HumanPlayer firstPlayer = new HumanPlayer("A", movesHandler);
         HumanPlayer secondPlayer = new HumanPlayer("B", movesHandler);
         game.StartGame(firstPlayer, secondPlayer);
-
+        int firstPlayerExpectedScore = 13;
+        int secondPlayerExpectedScore = 0;
         //Moves that should result in game ending with A winning
         for (int i = 0; i < movesHandler.GetMovesLength(); i++)
         {
             game.MakeMove();
         }
 
-        Assert.AreEqual(game.GetWinner().GetName(), "A");
-        Assert.AreEqual(firstPlayer.GetPoints(), 13);
-        Assert.AreEqual(secondPlayer.GetPoints(), 0);
+        Assert.That(firstPlayer.GetName(), Is.EqualTo(game.GetWinner()?.GetName()));
+        Assert.That(firstPlayerExpectedScore, Is.EqualTo(firstPlayer.GetPoints()));
+        Assert.That(secondPlayerExpectedScore, Is.EqualTo(secondPlayer.GetPoints()));
     }
 
     [Test]
@@ -93,8 +91,8 @@ public class ReversoModelTests
         AIPlayer secondPlayer = new AIPlayer("B", false);
         bool fieldUpdatedEventRaised = false;
         bool pointsUpdatedEventRaised = false;
-        game.FieldUpdated += (field) => fieldUpdatedEventRaised = true;
-        game.PointsUpdated += (points) => pointsUpdatedEventRaised = true;
+        game.FieldUpdated += (updatedField) => fieldUpdatedEventRaised = true;
+        game.PointsUpdated += (updatedPoints) => pointsUpdatedEventRaised = true;
 
         game.StartGame(firstPlayer, secondPlayer);
         game.MakeMove();
@@ -110,7 +108,7 @@ public class ReversoModelTests
         AIPlayer firstPlayer = new AIPlayer("A", false);
         AIPlayer secondPlayer = new AIPlayer("B", false);
         bool gameEndedEventRaised = false;
-        game.GameEnded += (player) => gameEndedEventRaised = true;
+        game.GameEnded += (winner) => gameEndedEventRaised = winner != null;
         game.StartGame(firstPlayer, secondPlayer);
 
         while (!game.GetEnded())

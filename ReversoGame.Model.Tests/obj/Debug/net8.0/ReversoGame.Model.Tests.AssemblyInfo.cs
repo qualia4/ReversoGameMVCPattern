@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReversoGame.Model.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c7e124cacab8d5c8976a73f6d90b5872450ca94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+009d307a75aba68e8f41e56a1ef8116385d9a2b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReversoGame.Model.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReversoGame.Model.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

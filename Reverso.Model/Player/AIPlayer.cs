@@ -2,8 +2,8 @@ namespace Reverso.Model;
 
 public class AIPlayer: Player
 {
-    Random rand = new Random();
-    private bool makeDelay;
+    private readonly Random rand = new Random();
+    private readonly bool makeDelay;
 
     public AIPlayer(string name, bool makeDelay = true) : base(name)
     {
@@ -24,7 +24,7 @@ public class AIPlayer: Player
             int y = rand.Next(0, 8);
             if (GameField.GetValid(x, y))
             {
-                int[] coords = new int[2] {x, y};
+                int[] coords = new int[] {x, y};
                 if (makeDelay)
                 {
                     int delay = rand.Next(1, 3);

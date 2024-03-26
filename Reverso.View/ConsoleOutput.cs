@@ -6,11 +6,11 @@ using System;
 
 public class ConsoleOutput
 {
-    private ReversoGameWithEvents game;
+    private ReversoGameWithEvents? game;
 
-    public void ListenTo(ReversoGameWithEvents game)
+    public void ListenTo(ReversoGameWithEvents reversoGame)
     {
-        this.game = game;
+        this.game = reversoGame;
         game.GameStarted += OnGameStarted;
         game.FieldUpdated += OnFieldUpdated;
         game.PointsUpdated += OnPointsUpdated;
@@ -45,15 +45,9 @@ public class ConsoleOutput
     private void OnGameEnded(Player? winner)
     {
         Console.WriteLine("Game is over!");
-        if (winner == null)
-        {
-            Console.WriteLine("No winner found!");
-            return;
-        }
-        else
-        {
-            Console.WriteLine($"Player {winner.GetName()} won with {winner.GetPoints()} points!");
-        }
+        Console.WriteLine(winner == null
+            ? "No winner found!"
+            : $"Player {winner.GetName()} won with {winner.GetPoints()} points!");
     }
 
     private void DrawXCoords(int fieldLength)
@@ -85,14 +79,7 @@ public class ConsoleOutput
             {
                 if (field[i, j].IfEmpty)
                 {
-                    if (field[i, j].IfValid)
-                    {
-                        Console.Write(" * ");
-                    }
-                    else
-                    {
-                        Console.Write(" - ");
-                    }
+                    Console.Write(field[i, j].IfValid ? " * " : " - ");
                 }
                 else
                 {

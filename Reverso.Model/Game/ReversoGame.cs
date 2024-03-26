@@ -4,10 +4,10 @@ public class ReversoGame : ITwoPlayerGame
 {
     private Player? FirstPlayer;
     private Player? SecondPlayer;
+    private Player? CurrentPlayer { get; set; }
     private Field GameField { get; } = new Field();
     private bool Ended { get; set; }
-    private Player? CurrentPlayer { get; set; }
-    protected Cell[,]? GetField() => GameField.GetCells();
+    protected Cell[,] GetField() => GameField.GetCells();
 
     public void MakeMove()
     {
@@ -46,7 +46,7 @@ public class ReversoGame : ITwoPlayerGame
         EndGame();
     }
 
-    public Dictionary<string, int>? GetPoints()
+    protected Dictionary<string, int> GetPoints()
     {
         CheckGameStarted();
         var players = new Dictionary<string, int>()

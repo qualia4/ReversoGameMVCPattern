@@ -1,12 +1,12 @@
 namespace Reverso.Controller;
 
 using System;
-using Reverso.Model;
+using Model;
 
 public class GameController
 {
-    private ITwoPlayerGame game;
-    private GameStarter Starter;
+    private readonly ITwoPlayerGame game;
+    private readonly GameStarter Starter;
 
     public GameController(ITwoPlayerGame game)
     {
@@ -44,7 +44,7 @@ public class GameController
             catch (Exception ex)
             {
                 string command = ex.Message;
-                var splitCommand = command.Split(new char[0]);
+                var splitCommand = command.Split(Array.Empty<char>());
                 switch (splitCommand[0].ToLower())
                 {
                     case "move":

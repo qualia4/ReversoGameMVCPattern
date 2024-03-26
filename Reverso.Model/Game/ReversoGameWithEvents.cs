@@ -6,7 +6,7 @@ public class ReversoGameWithEvents : ReversoGame
 {
     public event Action? GameStarted;
 
-    public event Action<Cell[,]?>? FieldUpdated;
+    public event Action<Cell[,]>? FieldUpdated;
 
     public event Action<Player?>? GameEnded;
 

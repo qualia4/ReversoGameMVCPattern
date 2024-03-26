@@ -1,11 +1,9 @@
-using System.Diagnostics;
-
 namespace Reverso.Controller;
-using Reverso.Model;
+using Model;
 
 public class GameStarter
 {
-    private ITwoPlayerStartable game;
+    private readonly ITwoPlayerStartable game;
 
     public GameStarter(ITwoPlayerStartable game)
     {
@@ -17,8 +15,8 @@ public class GameStarter
         Console.WriteLine("PvP, PvE or EvE?");
         while (true)
         {
-            string responce = Console.ReadLine().ToLower();
-            switch (responce)
+            string response = Console.ReadLine().ToLower();
+            switch (response)
             {
                 case "pvp":
                     StartPvPGame(new MoveInputHandler());

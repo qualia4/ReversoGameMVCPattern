@@ -2,10 +2,10 @@ namespace Reverso.Model;
 
 public abstract class Player: IHasName
 {
-    public string Name { get; }
-    public int Points { get; set; }
+    private string Name { get; }
+    private int Points { get; set; }
 
-    public Player(string name)
+    protected Player(string name)
     {
         Name = name;
         Points = 0;

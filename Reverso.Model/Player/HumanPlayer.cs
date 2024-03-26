@@ -2,7 +2,7 @@ namespace Reverso.Model;
 
 public class HumanPlayer : Player
 {
-    private IInputHandler _inputHandler;
+    private readonly IInputHandler _inputHandler;
     public HumanPlayer(string name, IInputHandler inputHandler) : base(name)
     {
         _inputHandler = inputHandler;
