@@ -78,6 +78,21 @@ public class ReversoModelTests
     }
 
     [Test]
+    public void GetWinner_WhenPointsEqual_ReturnsNull()
+    {
+        var game = new ReversoGame();
+        TestMovesHandler movesHandler = new TestMovesHandler();
+        HumanPlayer firstPlayer = new HumanPlayer("A", movesHandler);
+        HumanPlayer secondPlayer = new HumanPlayer("A", movesHandler);
+        game.StartGame(firstPlayer, secondPlayer);
+
+        game.MakeMove();
+        game.MakeMove();
+
+        Assert.That(game.GetWinner(), Is.EqualTo(null));
+    }
+
+    [Test]
     public void StartGame_InvokesEvent()
     {
         var game = new ReversoGameWithEvents();
