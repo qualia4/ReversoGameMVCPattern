@@ -1,0 +1,16 @@
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/bin/Debug/net8.0/Reverso.Model.Game.deps.json
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/bin/Debug/net8.0/Reverso.Model.Game.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/bin/Debug/net8.0/Reverso.Model.Game.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/bin/Debug/net8.0/Reverso.Model.Abstractions.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/bin/Debug/net8.0/Reverso.Model.Abstractions.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.csproj.AssemblyReference.cache
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.GeneratedMSBuildEditorConfig.editorconfig
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.AssemblyInfoInputs.cache
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.AssemblyInfo.cs
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.csproj.CoreCompileInputs.cache
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.sourcelink.json
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.csproj.CopyComplete
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/refint/Reverso.Model.Game.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/Reverso.Model.Game.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Game/obj/Debug/net8.0/ref/Reverso.Model.Game.dll

@@ -1,0 +1,91 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Reverso.Starter/1.0.0": {
+        "dependencies": {
+          "Reverso.Controller": "1.0.0",
+          "Reverso.Model.Game": "1.0.0",
+          "Reverso.View": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Starter.dll": {}
+        }
+      },
+      "Reverso.Controller/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0",
+          "Reverso.Model.Players": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Controller.dll": {}
+        }
+      },
+      "Reverso.Model.Abstractions/1.0.0": {
+        "runtime": {
+          "Reverso.Model.Abstractions.dll": {}
+        }
+      },
+      "Reverso.Model.Game/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Model.Game.dll": {}
+        }
+      },
+      "Reverso.Model.Players/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Model.Players.dll": {}
+        }
+      },
+      "Reverso.View/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Game": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.View.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Reverso.Starter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Controller/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model.Game/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model.Players/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.View/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

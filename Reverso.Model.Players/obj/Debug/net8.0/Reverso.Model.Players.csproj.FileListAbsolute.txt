@@ -1,0 +1,16 @@
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/bin/Debug/net8.0/Reverso.Model.Players.deps.json
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/bin/Debug/net8.0/Reverso.Model.Players.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/bin/Debug/net8.0/Reverso.Model.Players.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/bin/Debug/net8.0/Reverso.Model.Abstractions.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/bin/Debug/net8.0/Reverso.Model.Abstractions.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.csproj.AssemblyReference.cache
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.GeneratedMSBuildEditorConfig.editorconfig
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.AssemblyInfoInputs.cache
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.AssemblyInfo.cs
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.csproj.CoreCompileInputs.cache
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.sourcelink.json
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.csproj.CopyComplete
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/refint/Reverso.Model.Players.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/Reverso.Model.Players.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/obj/Debug/net8.0/ref/Reverso.Model.Players.dll
