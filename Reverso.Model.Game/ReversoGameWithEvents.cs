@@ -9,7 +9,7 @@ public class ReversoGameWithEvents : ReversoGame
 
     public event Action<Cell[,]>? FieldUpdated;
 
-    public event Action<Player?>? GameEnded;
+    public event Action<(string, int)?>? GameEnded;
 
     public event Action<Dictionary<string, int>>? PointsUpdated;
 

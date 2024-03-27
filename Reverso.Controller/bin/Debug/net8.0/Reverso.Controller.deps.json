@@ -8,15 +8,24 @@
     ".NETCoreApp,Version=v8.0": {
       "Reverso.Controller/1.0.0": {
         "dependencies": {
-          "Reverso.Model": "1.0.0"
+          "Reverso.Model.Abstractions": "1.0.0",
+          "Reverso.Model.Players": "1.0.0"
         },
         "runtime": {
           "Reverso.Controller.dll": {}
         }
       },
-      "Reverso.Model/1.0.0": {
+      "Reverso.Model.Abstractions/1.0.0": {
         "runtime": {
-          "Reverso.Model.dll": {}
+          "Reverso.Model.Abstractions.dll": {}
+        }
+      },
+      "Reverso.Model.Players/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Model.Players.dll": {}
         }
       }
     }
@@ -27,7 +36,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Reverso.Model/1.0.0": {
+    "Reverso.Model.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model.Players/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -12,7 +12,9 @@
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
           "NUnit3TestAdapter": "4.2.1",
-          "Reverso.Model": "1.0.0",
+          "Reverso.Model.Abstractions": "1.0.0",
+          "Reverso.Model.Game": "1.0.0",
+          "Reverso.Model.Players": "1.0.0",
           "coverlet.collector": "6.0.0"
         },
         "runtime": {
@@ -317,9 +319,25 @@
       "NUnit.Analyzers/3.6.1": {},
       "NUnit3TestAdapter/4.2.1": {},
       "System.Reflection.Metadata/1.6.0": {},
-      "Reverso.Model/1.0.0": {
+      "Reverso.Model.Abstractions/1.0.0": {
         "runtime": {
-          "Reverso.Model.dll": {}
+          "Reverso.Model.Abstractions.dll": {}
+        }
+      },
+      "Reverso.Model.Game/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Model.Game.dll": {}
+        }
+      },
+      "Reverso.Model.Players/1.0.0": {
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Reverso.Model.Players.dll": {}
         }
       }
     }
@@ -421,7 +439,17 @@
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
     },
-    "Reverso.Model/1.0.0": {
+    "Reverso.Model.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model.Game/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reverso.Model.Players/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

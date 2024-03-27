@@ -1,8 +1,6 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Controller.deps.json
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Controller.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Controller.pdb
-/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Model.dll
-/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Model.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.csproj.AssemblyReference.cache
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.GeneratedMSBuildEditorConfig.editorconfig
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.AssemblyInfoInputs.cache
@@ -14,3 +12,7 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/ref/Reverso.Controller.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/obj/Debug/net8.0/Reverso.Controller.sourcelink.json
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Model.Abstractions.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Model.Players.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Model.Abstractions.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Controller/bin/Debug/net8.0/Reverso.Model.Players.pdb

@@ -1,4 +1,4 @@
-namespace Reverso.Model.GameInterfaces;
+namespace Reverso.Model.Abstractions;
 
 public interface ITwoPlayerGame: ITwoPlayerStartable
 {

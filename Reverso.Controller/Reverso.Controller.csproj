@@ -7,7 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Reverso.Model\Reverso.Model.csproj" />
+      <ProjectReference Include="..\Reverso.Model.Abstractions\Reverso.Model.Abstractions.csproj" />
+      <ProjectReference Include="..\Reverso.Model.Players\Reverso.Model.Players.csproj" />
     </ItemGroup>
 
 </Project>

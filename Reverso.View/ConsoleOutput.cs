@@ -1,5 +1,4 @@
 using Reverso.Model.Game;
-using Reverso.Model.Abstractions;
 
 namespace Reverso.View;
 
@@ -43,12 +42,15 @@ public class ConsoleOutput
         Console.WriteLine(" ");
     }
 
-    private void OnGameEnded(Player? winner)
+    private void OnGameEnded((string, int)? winner)
     {
         Console.WriteLine("Game is over!");
-        Console.WriteLine(winner == null
-            ? "No winner found!"
-            : $"Player {winner.GetName()} won with {winner.GetPoints()} points!");
+        if (winner == null)
+        {
+            Console.WriteLine("No winner found!");
+            return;
+        }
+        Console.Write($"{winner.Value.Item1} won with {winner.Value.Item2} points!");
     }
 
     private void DrawXCoords(int fieldLength)

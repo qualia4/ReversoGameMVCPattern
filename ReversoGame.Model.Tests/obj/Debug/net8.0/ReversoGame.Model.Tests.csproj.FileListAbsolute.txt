@@ -91,8 +91,6 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.dll
-/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.pdb
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.csproj.CopyComplete
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/refint/ReversoGame.Model.Tests.dll
@@ -100,3 +98,9 @@
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.genruntimeconfig.cache
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ref/ReversoGame.Model.Tests.dll
 /Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/obj/Debug/net8.0/ReversoGame.Model.Tests.sourcelink.json
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.Abstractions.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.Game.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.Players.dll
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.Abstractions.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.Game.pdb
+/Users/qualiaaa/RiderProjects/ReversoProject/ReversoGame.Model.Tests/bin/Debug/net8.0/Reverso.Model.Players.pdb

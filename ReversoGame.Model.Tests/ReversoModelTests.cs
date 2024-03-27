@@ -64,7 +64,15 @@ public class ReversoModelTests
             game.MakeMove();
         }
 
-        Assert.That(firstPlayer.GetName(), Is.EqualTo(game.GetWinner()?.GetName()));
+        string winnerName = "";
+        (string, int)? winnerData = game.GetWinner();
+        if (winnerData == null)
+        {
+            Assert.Fail();
+            return;
+        }
+        winnerName = winnerData.Value.Item1;
+        Assert.That(firstPlayer.GetName(), Is.EqualTo(winnerName));
         Assert.That(firstPlayerExpectedScore, Is.EqualTo(firstPlayer.GetPoints()));
         Assert.That(secondPlayerExpectedScore, Is.EqualTo(secondPlayer.GetPoints()));
     }
@@ -94,7 +102,6 @@ public class ReversoModelTests
         bool pointsUpdatedEventRaised = false;
         game.FieldUpdated += (updatedField) => fieldUpdatedEventRaised = true;
         game.PointsUpdated += (updatedPoints) => pointsUpdatedEventRaised = true;
-
         game.StartGame(firstPlayer, secondPlayer);
         game.MakeMove();
 

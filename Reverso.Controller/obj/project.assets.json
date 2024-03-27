@@ -2,28 +2,47 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Reverso.Model/1.0.0": {
+      "Reverso.Model.Abstractions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/Reverso.Model.dll": {}
+          "bin/placeholder/Reverso.Model.Abstractions.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Reverso.Model.dll": {}
+          "bin/placeholder/Reverso.Model.Abstractions.dll": {}
+        }
+      },
+      "Reverso.Model.Players/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Reverso.Model.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Reverso.Model.Players.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Reverso.Model.Players.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Reverso.Model/1.0.0": {
+    "Reverso.Model.Abstractions/1.0.0": {
       "type": "project",
-      "path": "../Reverso.Model/Reverso.Model.csproj",
-      "msbuildProject": "../Reverso.Model/Reverso.Model.csproj"
+      "path": "../Reverso.Model.Abstractions/Reverso.Model.Abstractions.csproj",
+      "msbuildProject": "../Reverso.Model.Abstractions/Reverso.Model.Abstractions.csproj"
+    },
+    "Reverso.Model.Players/1.0.0": {
+      "type": "project",
+      "path": "../Reverso.Model.Players/Reverso.Model.Players.csproj",
+      "msbuildProject": "../Reverso.Model.Players/Reverso.Model.Players.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Reverso.Model >= 1.0.0"
+      "Reverso.Model.Abstractions >= 1.0.0",
+      "Reverso.Model.Players >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -52,8 +71,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj": {
-              "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model/Reverso.Model.csproj"
+            "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Abstractions/Reverso.Model.Abstractions.csproj": {
+              "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Abstractions/Reverso.Model.Abstractions.csproj"
+            },
+            "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/Reverso.Model.Players.csproj": {
+              "projectPath": "/Users/qualiaaa/RiderProjects/ReversoProject/Reverso.Model.Players/Reverso.Model.Players.csproj"
             }
           }
         }

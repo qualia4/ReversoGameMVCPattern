@@ -1,6 +1,6 @@
 namespace Reverso.Controller;
 using Model.Players;
-using Model.GameInterfaces;
+using Model.Abstractions;
 
 public class GameStarter
 {

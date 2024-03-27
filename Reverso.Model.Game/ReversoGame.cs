@@ -1,5 +1,4 @@
 namespace Reverso.Model.Game;
-using GameInterfaces;
 using Abstractions;
 
 public class ReversoGame : ITwoPlayerGame
@@ -78,11 +77,17 @@ public class ReversoGame : ITwoPlayerGame
         SecondPlayer?.AddPoints(points);
     }
 
-    public Player? GetWinner()
+    public (string, int)? GetWinner()
     {
         CheckGameStarted();
-        return (FirstPlayer?.GetPoints() > SecondPlayer?.GetPoints()) ? FirstPlayer :
+        Player? winner = (FirstPlayer?.GetPoints() > SecondPlayer?.GetPoints()) ? FirstPlayer :
             (SecondPlayer?.GetPoints() > FirstPlayer?.GetPoints()) ? SecondPlayer : null;
+        if (winner == null)
+        {
+            return null;
+        }
+        (string, int) winnerData = (winner.GetName(), winner.GetPoints());
+        return winnerData;
     }
 
     private void SwitchPlayer()
